@@ -17,7 +17,7 @@ object Main {
     var actorList = List[ActorRef]()
 
     for(i <- 1 to NUMBER_OF_ECHOES) {
-      val receiver = actorSystem.actorOf(Props[Sender], "receiver"+i)
+      val receiver = actorSystem.actorOf(Props[Receiver], "receiver"+i)
       actorList ::= receiver
     }
   
